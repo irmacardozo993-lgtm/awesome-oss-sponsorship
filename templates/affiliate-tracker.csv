@@ -1,0 +1,4 @@
+"NOTE: tracker for affiliate/referral deals. Columns are date, company, program, referral_url, commission_type, rate, cookie_days, clicks, signups, conversions, revenue_usd, payout_method, payout_min, status, notes. Example rows are illustrative figures only."
+date,company,program,referral_url,commission_type,rate,cookie_days,clicks,signups,conversions,revenue_usd,payout_method,payout_min,status,notes
+2026-06-15,Fly.io,Fly.io referral program,https://fly.io/superfly?ref=fastgraph,recurring_percent,15%,90,42,3,1,12.40,Stripe balance,25,active,example row - illustrative figures
+2026-06-20,OpenRouter,OpenRouter creator program,https://openrouter.ai/creators?ref=fastgraph,flat_per_user,$5,30,88,5,2,10.00,PayPal,50,pending,example row - illustrative figures

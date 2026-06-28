@@ -1,0 +1,279 @@
+# data/affiliate-programs.yml
+# Developer-tool affiliate / referral programs verified 2026-06-29 against official sites.
+# Legend in `status`: active | closed | sunset | no_public_program | channel_only.
+# Commissions are reference only — re-verify at the official url before promoting.
+# IMPORTANT: third-party affiliate directories (OpenAffiliate, AffiliPilot, Awin listings) frequently
+# publish programs that do NOT exist on the company's own site. This file only lists programs
+# confirmed (or explicitly absent) at the official source.
+
+version: 1
+verified_on: "2026-06-29"
+caveat: "Commissions/cookies change and programs close. Re-verify at the official url before relying."
+
+# ---------------------------------------------------------------------------
+# Active, publicly-listable programs with real commissions + OSS/devtool fit.
+# ---------------------------------------------------------------------------
+active_programs:
+  - name: Railway
+    category: cloud_hosting
+    url: https://railway.com/affiliate-program
+    docs: https://docs.railway.com/community/affiliate-program
+    status: active
+    commission: "15% recurring on referred customer's invoices for first 12 months (then ends)"
+    cookie_days: null  # not documented
+    payout: "GitHub Sponsors or Buy Me a Coffee (processed by Railway team)"
+    min_payout: null  # no stated minimum
+    network: direct
+    referred_user_credit: "$20 Railway credits (≈ one free Pro month)"
+    oss_fit: "Excellent — full-stack cloud deploy/host with databases; easy cash payout via GitHub Sponsors."
+    notes: "No approval required to join. Best devtool-fit affiliate with a cash payout rail maintainers already use."
+
+  - name: Neon
+    category: database
+    url: https://neon.com/programs/open-source
+    status: active
+    commission: "$20 cash per qualifying referral (referred user signs up via your link and spends $20+)"
+    cookie_days: null
+    payout: "GitHub Sponsors (cash), monthly, no minimum stated"
+    min_payout: null
+    network: direct
+    oss_fit: "Excellent — serverless Postgres; the OSS cash-referral program is purpose-built for open-source maintainers."
+    notes: "Separate general pilot (Jun 19 2026): $5 account credit when a friend signs up and spends $5. Use the OSS program for cash."
+
+  - name: ElevenLabs
+    category: ai_api
+    url: https://elevenlabs.io/affiliates
+    docs: https://elevenlabs.io/affiliates-terms
+    status: active
+    commission: "22% recurring (pre-tax) on Starter/Creator/Pro/Scale for 12 months; 11% on Business; 0% Enterprise"
+    cookie_days: null  # not disclosed (set inside PartnerStack)
+    payout: "PartnerStack (bank/Stripe/PayPal)"
+    min_payout: 5  # USD
+    network: PartnerStack
+    oss_fit: "Yes — TTS/voice-cloning API widely used in devtools, agents, automation."
+    notes: "Commissions activate 90 days after the referral's first payment (chargeback window); paid end of the 3rd month following."
+
+  - name: Apify
+    category: scraping_automation
+    url: https://apify.com/partners/affiliate
+    docs: https://docs.apify.com/legal/affiliate-program-terms-and-conditions
+    status: active
+    commission: "20% of referred customer's payments for first 3 months, then 30% thereafter, capped at $2,500 per customer (lifetime up to cap)"
+    cookie_days: 45
+    payout: "PayPal, bank transfer, or Wise"
+    min_payout: 100  # USD, AND must have referred >=3 customers before any payout
+    network: direct
+    oss_fit: "Yes — web scraping/automation + Actor marketplace; direct match for scrape/crawl/automate devs."
+
+  - name: Bright Data
+    category: scraping_automation
+    url: https://brightdata.com/affiliate
+    docs: https://brightdata.com/affiliate/faq
+    status: active
+    commission: "50% revenue share, capped up to $2,500 per customer (tiered $1,000–$2,500); +15% second-tier on sub-affiliates (up to $5,000 per affiliate). No time limit while customer active."
+    cookie_days: 90
+    payout: "PartnerStack (method/threshold shown in dashboard post-signup)"
+    min_payout: null  # not publicly documented
+    network: PartnerStack
+    oss_fit: "Yes — proxy/scraping infrastructure (residential & datacenter IPs, Scraping Browser, Web Unlocker)."
+
+  - name: ScrapingBee
+    category: scraping_automation
+    url: https://www.scrapingbee.com/affiliates/
+    status: active
+    commission: "25% recurring on referred customer's monthly payments, lifetime (until cancellation); capped at $62.25/mo per customer (Business plan $249/mo)"
+    cookie_days: null  # not documented; tracking only via affiliate link, cookie-blockers untrackable
+    payout: "PayPal"
+    min_payout: 50  # USD, AND must refer >=2 customers; 30–60 day pending period for refunds
+    network: direct
+    oss_fit: "Yes — scraping API (proxy rotation, JS rendering, CAPTCHA handling)."
+
+  - name: Browserless
+    category: scraping_automation
+    url: https://www.browserless.io/affiliate
+    status: active
+    commission: "Tiered recurring for 12 months: 20% Standard (all new paying), 25% High Volume (5+ paying/mo), 30% Premium Partner (10+ paying/mo)"
+    cookie_days: 90
+    payout: "PayPal or bank transfer, monthly"
+    min_payout: 50  # USD
+    network: Rewardful
+    oss_fit: "Yes — cloud headless-browser / Puppeteer & Playwright scraping and testing."
+
+  - name: n8n
+    category: scraping_automation
+    url: https://n8n.io/affiliates/
+    status: active
+    commission: "30% recurring on n8n Cloud referrals (Starter and Pro plans) for first 12 months; net (tax-exclusive). Self-hosted Community/Enterprise excluded."
+    cookie_days: null
+    payout: "PayPal only"
+    min_payout: 100  # EUR
+    network: PartnerStack
+    oss_fit: "Yes — source-available/fair-code workflow automation (self-hostable)."
+    notes: "Paid ad campaigns prohibited (violators removed)."
+
+  - name: Make
+    category: scraping_automation
+    url: https://www.make.com/en/affiliate
+    status: active
+    commission: "35% recurring on referred users' subscription payments for 12 months from registration; excludes extra operations purchased"
+    cookie_days: 30
+    payout: "Wise only (email must match dashboard)"
+    min_payout: 100  # USD, AND must refer 3 unique paying users; 2–3 week processing
+    network: direct
+    oss_fit: "Yes — visual/low-code automation (more low-code than n8n but devtool-adjacent)."
+
+  - name: Raycast
+    category: dev_saas
+    url: https://www.raycast.com/blog/affiliate-program
+    status: active
+    commission: "30% recurring on all payments from referred Pro users; referred users get 10% off"
+    cookie_days: null  # Rewardful-powered, last-click; not officially documented
+    payout: "Wise only"
+    min_payout: 50  # GBP
+    network: Rewardful
+    oss_fit: "Yes — native macOS dev-productivity launcher, core devtool audience."
+    notes: "30-day pending period; self-referrals auto-blocked."
+
+  - name: Pluralsight
+    category: dev_saas
+    url: https://www.pluralsight.com/affiliate
+    status: active
+    commission: "$1 per free-trial signup; 30% of first month (monthly individual); 10% of first year (annual individual); 5% first quarter/year (team, max 5 seats). First purchase only (one-time)."
+    cookie_days: 7
+    payout: "CJ (Commission Junction)"
+    min_payout: null  # not specified on official page
+    network: CJ
+    oss_fit: "Yes — dev/IT skills learning platform."
+
+  - name: DigitalOcean
+    category: cloud_hosting
+    url: https://www.digitalocean.com/affiliates
+    docs: https://www.digitalocean.com/referral-program
+    status: active
+    commission: "Affiliate: 10% recurring on referred user's monthly spend for 12 months (via Awin/CJ). Referral (separate): $25 account credit to referrer once referred pays first $25; referred gets $200 credit (60-day)."
+    cookie_days: null
+    payout: "Affiliate via network (Awin/CJ); referral = account credit only (no cash-out)"
+    min_payout: null
+    network: Awin_CJ
+    oss_fit: "Yes — core deploy/host target; both credit and cash paths exist."
+    notes: "Referral is credit-only, 30 invites/day cap, not for org/team accounts. Use the affiliate (not referral) for cash."
+
+  - name: Netlify
+    category: cloud_hosting
+    url: https://www.netlify.com/partners/
+    docs: https://www.netlify.com/partners/program-agreement/
+    status: active
+    commission: "Ecosystem Partners: 20% on eligible self-serve new business for up to 12 months. Certified Partners (requires 3+ Pro or 1+ Enterprise referrals/yr + training): 20% on self-serve AND enterprise (new/renewals/expansion) for up to 24 months."
+    cookie_days: null  # via PartnerStack
+    payout: "PartnerStack"
+    min_payout: null
+    network: PartnerStack
+    oss_fit: "Yes — Jamstack/static-app hosting; requires partner application (not instant)."
+
+  - name: Vercel (v0)
+    category: cloud_hosting
+    url: https://partners.dub.co/v0
+    docs: https://vercel.com/legal/affiliate-marketing-terms
+    status: active
+    commission: "v0 Affiliate: 30% recurring on referred Premium/Team subscriptions for first 6 months + $5 per lead. Standard user referral: $5 credit/signup + $20 credit on subscription (v0 credits, not cash)."
+    cookie_days: null
+    payout: "Managed by Dub"
+    min_payout: null
+    network: Dub
+    oss_fit: "Yes — Vercel/v0 squarely Next.js/frontend-deploy; revenue share is v0/AI-editor centric."
+    notes: "No standard Vercel/Next.js referral commission — the active program is v0-based."
+
+# ---------------------------------------------------------------------------
+# Closed / sunset / dead — flag explicitly so readers don't waste time.
+# ---------------------------------------------------------------------------
+closed_programs:
+  - name: Hetzner
+    url: https://www.hetzner.com/legal/referrals
+    status: sunset
+    note: "Personal referral links valid only until 15 June 2026; now redirects to a generic €20 new-customer Cloud promo code (bonus valid until 31 Aug 2026). Original terms: €10 referrer + €20 new-customer Cloud credit. No cash. DEAD for new referrals as of June 2026. Existing earned credits redeemable until 31 Dec 2027."
+
+  - name: Notion
+    url: https://www.notion.com/affiliates
+    status: closed
+    note: "Hosted on PartnerStack. Up to $50/signup + 20% year-one revenue; 180-day cookie. Currently CLOSED to new applicants ('Program is currently not accepting new affiliates'). Existing affiliates remain."
+
+  - name: ShareASale
+    url: https://www.shareasale.com
+    status: defunct
+    note: "Acquired by Awin in 2017; shareasale.com closed 2025-10-06; fully merged into Awin. New affiliates sign up at awin.com. Skews consumer retail, not devtool."
+
+  - name: Heroku
+    url: https://www.heroku.com/partnering/
+    status: dead
+    note: "No public customer-facing referral program with cash commissions. Heroku Partner Program (Salesforce Consulting Partner track) = visibility/demo orgs/cert vouchers, no per-referral commissions. Heroku Enterprise subscriptions End of Sale for new customers (announced Feb 2026)."
+
+# ---------------------------------------------------------------------------
+# No public program found (verified absent at official site, 2026-06-29).
+# Do NOT list these as affiliate programs despite third-party directory claims.
+# ---------------------------------------------------------------------------
+no_public_program:
+  cloud_hosting: [Render, "Fly.io", Cloudflare, AWS]
+  cloudflare_note: "Cloudflare = channel-only (PowerUP Partner Program, partner-portal rates not public); no individual affiliate. Warp+ referral credits ended Nov 2024."
+  aws_note: "AWS = organization-only via AWS Partner Network (ACE/Solution Provider); no individual affiliate. Public 'AWS affiliate' pages misdirect to Amazon Associates (retail)."
+  ai_api: [OpenAI, Anthropic, Replicate, "Together AI", OpenRouter, Mistral, Groq, "Hugging Face", DeepSeek]
+  ai_api_note: "OpenAI Partner Network & Anthropic Claude Partner Network are B2B channel programs (enablement/training), explicitly no commissions. DeepSeek/Mistral Ambassador = API credits, not cash. Most AI API platforms have NO referral monetization."
+  database_backend_monitoring: [Supabase, PlanetScale, Turso, Upstash, Sentry, PostHog, Meilisearch, Axiom]
+  database_notes:
+    - "Supabase: partners page is an integration marketplace, no referral credit system."
+    - "Turso: Partner Program launched May 27 2026 ('earn revenue share') but discloses no rates — closed partner network, not a listable affiliate (status: unverified)."
+    - "Upstash: $1,000/mo credit GRANT for accepted OSS projects (sponsorship), not a referral commission."
+    - "Sentry: only a sponsored-account application (free/discounted for OSS/edu/startup), no affiliate."
+    - "PostHog: explicitly states 'We do not have any official partners.'"
+  dev_saas: [Linear, JetBrains, Egghead, "Frontend Masters", Zapier]
+  dev_saas_notes:
+    - "Linear: only a Startup Program (free via accelerator partners), no user-referral affiliate."
+    - "JetBrains: reseller/consulting-training + Content Creators (free IDE access for bloggers, not commissions). Not on PartnerStack."
+    - "Egghead & Frontend Masters (now Master.dev): no affiliate program; deliberately avoid affiliate links."
+    - "Zapier: referral benefit restricted to certified Solution Partners with a professional website; no open affiliate signup."
+  github: "GitHub itself has NO public referral/affiliate/reseller-commission program (verified across github.com/partners, Copilot Partner Program, third-party directories). GitHub Sponsors is donations, not affiliate. Individual OSS authors cannot earn referral commissions on GitHub paid plans."
+
+# ---------------------------------------------------------------------------
+# Affiliate networks an OSS author can join as a publisher.
+# ---------------------------------------------------------------------------
+networks:
+  - name: PartnerStack
+    url: https://partnerstack.com
+    marketplace: https://market.partnerstack.com
+    best_for: "Best for devtool/SaaS offers — 2,500+ programs, devtool-dense."
+    signup: "Free, open self-service via dash.partnerstack.com; no invite needed. Apply to each brand individually."
+    payout: "PayPal, Stripe, direct deposit via Airwallex. Min withdrawal $5 USD. Commissions available ~13th of following month."
+    hosted_devtool_programs: ["Netlify (20% recurring)", "n8n (30% yr1)", "ElevenLabs (22%/11%)", "Bright Data (50% up to $1K/customer)", "Notion (closed to new)"]
+
+  - name: Impact
+    url: https://impact.com
+    best_for: "Broad cross-brand marketplace; less devtool-dense than PartnerStack, more consumer/marketing SaaS."
+    signup: "Free, open self-service publisher signup; platform reviews. No hard traffic minimum."
+    payout: "Bank deposit (ACH/EFT), PayPal (2% capped $20), wire. Min $10 USD. US W-9 required at $2,000/yr."
+    hosted_examples: [Shopify, Semrush, Canva, Hostinger, airSlate]
+
+  - name: Lemon Squeezy
+    url: https://www.lemonsqueezy.com
+    best_for: "Merchant of Record with per-merchant affiliate feature (acquired by Stripe Jul 2024, still active). Popular with indie/dev SaaS."
+    signup: "No central sign-up — join each merchant's program individually. Merchants control approval + rates."
+    payout: "Bank or PayPal, ~$10 min, bi-monthly with 30-day hold. ~2% fee on referred sales."
+    note: "Not a browsable network directory — you promote a specific product whose creator enabled Lemon Squeezy affiliates."
+
+  - name: Rewardful
+    url: https://www.rewardful.com
+    best_for: "Affiliate INFRASTRUCTURE for SaaS (integrates Stripe/Paddle); per-merchant, not a marketplace."
+    signup: "No central sign-up. Invited by / apply to a specific SaaS's Rewardful-powered program (affiliates.<brand>.com)."
+    hosted_devtool_programs: ["Raycast (30% Pro)", "Replit", "HeyGen", "Clay", "Beehiiv", "Baremetrics", "Transistor"]
+    note: "Browserless integrates with Rewardful via n8n automations, not a Rewardful-hosted program."
+
+  - name: Tolt
+    url: https://tolt.com
+    best_for: "Affiliate software for SaaS startups (Stripe/Paddle/Chargebee); per-merchant."
+    signup: "No central sign-up. Each SaaS chooses auto-approve or apply-for-access; join via <brand>.tolt.io."
+    payout: "PayPal, Wise, Payoneer; NET-30 typical. Min commonly $50 (some $25)."
+    hosted_examples: ["Typefully", "Fathom Analytics", "Parsio", "Folk.app", "numerous.ai"]
+
+  - name: Awin
+    url: https://www.awin.com
+    best_for: "Former ShareASale parent; open but consumer-retail-skewed (Etsy, Under Armour, AliExpress). NOT devtool-relevant."
+    signup: "Free via ui.awin.com/publisher-signup; requires website domain, 1–3 day approval; some programs need $1–$5 refundable deposit."
+    payout: "Min $20 (configurable); ACH/BACS/SEPA, wire, Payoneer. No PayPal. Net ~20–30 days."

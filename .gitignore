@@ -1,0 +1,14 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.code-workspace
+
+# Local working files not meant for the repo
+.affiliates-local.csv
+*-draft.md
+.sponsor-outreach/

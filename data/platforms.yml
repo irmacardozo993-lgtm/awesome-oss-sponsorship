@@ -1,0 +1,389 @@
+# data/platforms.yml
+# Open-source monetization platform database for awesome-oss-sponsorship.
+# Verified 2026-06-29 against official sites via direct fetch. Statuses reflect what the
+# fetched page showed on that date. Fees/models CHANGE — treat as "reference only" and
+# re-verify at the platform's own page before publishing a rate card or signing a deal.
+# Real revenue numbers live in docs/case-studies.md; rate estimates in pricing-benchmarks.yml.
+
+version: 1
+verified_on: "2026-06-29"
+caveat: "All fees and models are reference only and change frequently. Re-verify at the official url before relying."
+
+# Category legend:
+#   sponsorship      = direct recurring/one-time sponsor relationships (GitHub Sponsors)
+#   donation         = tip / fund an entity
+#   fiscal_host      = legal/financial umbrella holding funds for a project
+#   subscription     = recurring memberships / paid plans
+#   bounty           = pay-for-issue / pay-for-PR
+#   ads              = sell ad inventory on your docs/newsletter/site
+#   billing_mor      = merchant-of-record billing (tax handled) — not pure sponsorship
+#   recruiting       = matchmaking / hiring
+
+platforms:
+  - name: GitHub Sponsors
+    category: sponsorship
+    url: https://github.com/sponsors
+    docs: https://docs.github.com/en/sponsors
+    status: alive
+    best_for: "Individual OSS maintainers who want 0% fees and native GitHub integration."
+    monetization_model:
+      personal_account: "0% platform fee (100% to developer; only payment-processing applies)"
+      organization_account: "up to 6% = 3% card processing + 3% GitHub service fee; the 3% card fee can be removed with invoiced billing"
+      payment_methods: "debit/credit cards. PayPal was dropped Feb 23, 2023."
+    region: "103 supported regions. Mainland China (PRC) is NOT supported; Hong Kong SAR & Macao SAR are. Russia and several sanctioned countries are not."
+    payout_support: "Bank account via Stripe Connect; bank region must match region of residence. Tax: W-9 (US) / W-8BEN (non-US). A fiscal host can only be chosen at initial sign-up."
+    pros:
+      - "0% platform fee on personal sponsorships"
+      - "Native GitHub UX; sponsor button via .github/FUNDING.yml"
+      - "Invoiced billing removes card fee for org sponsors"
+      - "$40M+ paid to maintainers to date; 4.2K+ orgs sponsoring"
+    cons:
+      - "Org sponsorships cost up to 6%"
+      - "No PayPal"
+      - "Mainland China, Russia and others cannot receive funds"
+      - "Tier price is immutable once published (must retire + recreate)"
+    notes: "Setup: Sponsors → Get sponsored → enable 2FA → profile (up to 6 repos) → tiers → Stripe → tax → Request approval. Waitlist exists for unsupported regions. Up to 10 one-time + 10 monthly tiers; max $12,000/mo."
+
+  - name: Open Collective
+    category: fiscal_host
+    url: https://opencollective.com
+    docs: https://docs.opencollective.com
+    status: alive
+    best_for: "Projects that want a public, transparent ledger with a fiscal host handling legal/tax."
+    monetization_model:
+      plans: "Discover $0/mo, Basic $60/mo, Pro $320/mo (per fiscal host)"
+      fees: "Free with optional Platform Tips, OR a 5% Crowdfunding Fee in place of tips. Overage per extra collective/expense: $10/$1 (Discover) → $20/$2 (Pro)."
+      processing: "payment-processing fees apply on top (not itemized on /pricing)"
+    region: "Global via regional fiscal hosts (US, EU, NZ, UK)"
+    payout_support: "Routed through fiscal hosts (e.g. Open Source Collective US, Open Collective Europe). Bank transfer / PayPal depending on host."
+    pros:
+      - "Fully transparent public ledger (income + expenses visible)"
+      - "Multiple regional fiscal hosts; 501(c)(6) stewardship via OSC"
+      - "Free tier available; 10K+ collectives, $40M+ managed"
+      - "Integrates with GitHub Sponsors and thanks.dev"
+    cons:
+      - "Host fee + processing not surfaced clearly on /pricing"
+      - "Overage fees on paid plans"
+      - "Fiscal host adds a layer of approval/expense workflow"
+    notes: "Stewarded by the Open Finance Consortium (OFiCo), a 501(c)(6) nonprofit. Great for projects that need to pay multiple contributors or vendors, not just one maintainer."
+
+  - name: Open Source Collective
+    category: fiscal_host
+    url: https://www.oscollective.org
+    docs: https://docs.oscollective.org
+    status: alive
+    best_for: "US-leaning OSS projects that need a 501(c)(6) legal/financial umbrella."
+    monetization_model:
+      fees: "Not disclosed on landing page (runs on the Open Collective platform — see Open Collective /pricing for plan/host structure)"
+    region: "US 501(c)(6); multi-country/currency payouts via bank or PayPal"
+    payout_support: "Automated 990 tax forms; expense processing for contributors, bounties, vendors; invoicing/grants/trademark/employment support."
+    pros:
+      - "Nonprofit 501(c)(6) status (tax-deductible for US sponsors in many cases)"
+      - "Accounting, invoicing, grants, trademark, employment handled"
+      - "Real-time open budgets; integrates with GitHub Sponsors & thanks.dev"
+    cons:
+      - "Fee structure not disclosed on its own site"
+      - "US-centric; EU/other regions use sibling hosts"
+    notes: "The US fiscal host that runs on top of Open Collective. Pick this when you need a legal entity to hold project funds and pay contributors."
+
+  - name: Polar
+    category: billing_mor
+    url: https://polar.sh
+    docs: https://polar.sh/docs
+    status: alive_pivoted
+    best_for: "SaaS/AI products billing usage (tokens, API calls, compute) that need global tax handling. No longer an OSS sponsorship product."
+    monetization_model:
+      plans: "Starter Free = 5.00% + 50¢/txn; Pro $20/mo = 3.80% + 40¢; Growth $100/mo = 3.60% + 35¢; Scale $400/mo = 3.40% + 30¢; Startup Program (free 12 mo) = 3.40% + 30¢"
+      role: "Merchant of Record — calculates, collects, remits tax worldwide (EU B2B reverse charge & B2C)"
+    region: "Global (MoR handles international tax compliance)"
+    payout_support: "Payout via payment providers; international cards may incur extra fees. Methods not enumerated."
+    pros:
+      - "Full Merchant-of-Record (tax, refunds, chargebacks, fraud)"
+      - "Transparent per-tier fees; adapters for 12 frameworks + JS/Python/Go/PHP SDKs"
+      - "Open source (Apache 2.0)"
+    cons:
+      - "Pivoted AWAY from OSS funding — no GitHub-Sponsors integration or maintainer-funding features"
+      - "Not a donation/sponsorship tool anymore; OSS angle is incidental"
+    notes: "If your goal is sponsoring maintainers, Polar no longer fits. If your OSS project ships a paid SaaS/AI product and you need billing+tax, it's strong."
+
+  - name: Buy Me a Coffee
+    category: donation
+    url: https://www.buymeacoffee.com
+    docs: https://help.buymeacoffee.com
+    status: alive
+    best_for: "Creators who want the simplest possible one-off tip / membership page."
+    monetization_model:
+      platform_fee: "5% per transaction (creator keeps 95%)"
+      processing: "Stripe 2.9% + $0.30 per successful txn + 0.5% payout + 1% international (outside US) + 0.5% for subscription payments"
+    region: "Global (Stripe-supported)"
+    payout_support: "Stripe Connect (no PayPal). Creator can absorb or pass card fees to supporters."
+    pros:
+      - "5% flat platform fee; no monthly cost"
+      - "Fast setup; supports one-time and memberships"
+      - "Card fees can be passed through to supporters"
+    cons:
+      - "Stripe-only; intl/subscription surcharges stack"
+      - "Not OSS-specific; no GitHub integration"
+    notes: "Good 'tip jar' for solo maintainers. Pair with GitHub Sponsors for recurring and BMC for one-off appreciation."
+
+  - name: Ko-fi
+    category: donation
+    url: https://ko-fi.com
+    docs: https://ko-fi.com/pricing
+    status: alive_unverified
+    best_for: "Creators who want 0% on plain donations with direct PayPal/Stripe."
+    monetization_model:
+      free_tier: "0% on one-time donations; 5% on memberships/shop/commissions (UNVERIFIED — ko-fi.com returned HTTP 403 to fetchers)"
+      gold: "Ko-fi Gold ~$12/mo ($96/yr) reportedly removes the 5% on everything (UNVERIFIED)"
+      processing: "Direct to creator's own PayPal/Stripe (~2.9% + $0.30) — Ko-fi never holds funds"
+    region: "Global (wherever PayPal/Stripe work)"
+    payout_support: "Direct to creator's PayPal/Stripe; instant; no Ko-fi payout fee/minimum (per search; UNVERIFIED by fetch)"
+    pros:
+      - "0% on donations (free tier, per search)"
+      - "Direct PayPal/Stripe; instant payouts"
+      - "No held funds"
+    cons:
+      - "Could not verify any fact directly — site bot-blocks fetchers (HTTP 403)"
+      - "5% on non-donation revenue unless Gold"
+    notes: "IMPORTANT: confirm current numbers in a browser at ko-fi.com/pricing before publishing. The 0%-donation model is the appeal; verify the Gold price and membership/shop cut."
+
+  - name: Patreon
+    category: subscription
+    url: https://www.patreon.com
+    docs: https://www.patreon.com/pricing
+    status: alive
+    best_for: "Ongoing recurring creator income (memberships) with a large existing audience. Not one-off OSS tips."
+    monetization_model:
+      platform_fee: "10% of income earned on Patreon (flat — the old Lite/Pro/Premium tiers do not appear on the current pricing page)"
+      extra: "Plus payment processing, currency conversion, payout fees, and applicable taxes (not itemized)"
+    region: "16+ currencies for payouts and pay-ins"
+    payout_support: "Pay-in: PayPal, Apple Pay, Venmo, Sofort. Payout methods/fees not detailed."
+    pros:
+      - "Mature recurring billing; large existing audience"
+      - "Free to start; pay only when you earn"
+    cons:
+      - "10% platform fee is high vs 0–5% alternatives"
+      - "Processing/payout fees layered on top (unspecified)"
+      - "Not OSS-specific"
+    notes: "Best when you produce ongoing content (videos, posts) alongside OSS. Pure maintainers usually do better on GitHub Sponsors (0%)."
+
+  - name: thanks.dev
+    category: donation
+    url: https://thanks.dev
+    docs: https://thanks.dev
+    status: alive
+    best_for: "Companies that want to auto-distribute one budget across their entire dependency tree (direct + indirect)."
+    monetization_model:
+      commission: "5% commission (covers hosting analysis/reports, contacting donors, distributing funds)"
+      processing: "payment-processing fees not separately stated (unverified)"
+    region: "Supports GitHub users/orgs; adding Launchpad support"
+    payout_support: "thanks.dev requests that developers set up a way to receive funds; specific methods not enumerated"
+    pros:
+      - "Automated dependency-tree walking (manifests → tree up to 3 levels deep, breadth-first split)"
+      - "One budget funds many maintainers (direct + transitive)"
+      - "Real corporate adoption — Canonical committed $120k/12mo ($10k/mo) across 358 GitHub users/orgs"
+    cons:
+      - "Landing page is JS-minimal (hard to self-verify fees without the blog)"
+      - "Maintainer must set up a payout method on request"
+    notes: "Company THANKS DEV PTY LTD (Australian, ABN 22 654 334 086). Great fit for enterprises that want to fund their whole dep graph without picking winners."
+
+  - name: StackAid
+    category: donation
+    url: https://www.stackaid.us
+    docs: https://www.stackaid.us
+    status: alive
+    best_for: "Sponsors who want one subscription to fund both direct and transitive dependencies automatically."
+    monetization_model:
+      subscriptions: "starting at $15/month"
+      self_cap: "StackAid caps its own allocation at 7.5% of your subscription"
+      dep_split: "each direct dependency shares up to 5% per indirect dependency (capped at 50% of the original allocation)"
+      processing: "payment-processing fees not stated (unverified)"
+    region: "Project owners claim repos via GitHub app and link Stripe accounts"
+    payout_support: "Stripe; regions not enumerated"
+    pros:
+      - "Covers indirect deps, not just direct"
+      - "Transparent self-cap (7.5%); GitHub-app auto-scan of dependency files"
+      - "Community raised $14,934 for 2,034 orgs and 4,338 projects"
+    cons:
+      - "Still references a Beta period (reallocation paused) — maturity caveat"
+      - "Small total raised to date (~$15k) — early scale"
+    notes: "Niche but conceptually clean: sponsor a whole dependency tree with one subscription. Useful as a supplementary inbound channel."
+
+  - name: Tidelift
+    category: subscription
+    url: https://tidelift.com
+    docs: https://www.sonarsource.com/solutions/security/
+    status: acquired
+    best_for: "Historically: enterprises buying security/maintenance guarantees on liberally-licensed OSS, channeled as paid maintainer contracts."
+    monetization_model:
+      model: "Subscription; income allocated to maintainer partners ('lifters'). Exact weighting unverified (support.tidelift.com returned 403)."
+    region: "n/a (now redirected)"
+    payout_support: "Maintainer-partner payouts; mechanics not on the fetched press-release page"
+    pros:
+      - "Funds maintainers for security work (paid maintainers '55% more likely to implement critical security')"
+      - "Enterprise-grade SLAs"
+    cons:
+      - "ACQUIRED by Sonar (press release Dec 17, 2024); tidelift.com redirects to sonarsource.com"
+      - "Long-term direction now tied to SonarQube Advanced Security"
+      - "Maintainer-pay allocation not self-verifiable"
+    notes: "Press release: 'no immediate planned changes to the current Tidelift product.' SonarQube Advanced Security GA May 2025 integrates Tidelift's maintainer insights. List it as historical/acquired, not a fresh option."
+
+  - name: IssueHunt
+    category: bounty
+    url: https://oss.issuehunt.io
+    docs: https://github.com/IssueHunt/readme
+    status: alive_stale
+    best_for: "Historically: sponsoring/funding specific GitHub issues in OSS repos. Use the OSS subdomain, not the canonical domain."
+    monetization_model:
+      fees: "Not disclosed on fetched pages (unverified). Web search claims ~20% hunter commission on the cybersecurity side — NOT confirmed for OSS."
+    region: "n/a"
+    payout_support: "Cybersecurity side (issuehunt.io): bank or PayPal after triage. OSS side (oss.issuehunt.io): payment mechanics not disclosed."
+    pros:
+      - "OSS product still lists 12,000+ projects and the bounty-on-PR-merge model"
+    cons:
+      - "Canonical issuehunt.io now hosts a cybersecurity bug-bounty platform (IssueHunt K.K.), NOT the OSS tool"
+      - "OSS landing copyright is 2019 with no fresh activity signal"
+      - "No fees disclosed"
+    notes: "CRITICAL: point readers at oss.issuehunt.io (BoostIO), NOT issuehunt.io. Re-check liveness in a browser before recommending. The bounty-on-issue model is still conceptually useful even if this specific platform is dormant."
+
+  - name: Algora
+    category: recruiting
+    url: https://algora.io
+    docs: https://algora.io
+    status: alive_pivoted
+    best_for: "Employers hiring vetted OSS contributors. Bounties are now a secondary sidebar feature."
+    monetization_model:
+      fees: "Not disclosed on the landing page (no fees, bounty pricing, or commission listed)"
+    region: "Global (remote hiring)"
+    payout_support: "Not disclosed. Recruiting side surfaces anonymous engineer profiles with comp expectations (~$300k–$600k)."
+    pros:
+      - "Still runs OSS bounties (Turso, Golem Cloud, Prettier, etc. listed)"
+      - "Strong OSS-contributor sourcing for hiring"
+    cons:
+      - "Pivoted to recruiting — bounty component is secondary"
+      - "No fee transparency"
+    notes: "If your entry is specifically about OSS bounties, Algora is now a recruiting platform with a bounty sidebar, not a dedicated bounty tool. Still worth listing for the bounty inventory that remains."
+
+  - name: EthicalAds
+    category: ads
+    url: https://www.ethicalads.io
+    docs: https://www.ethicalads.io/publishers
+    status: alive
+    best_for: "Developer-focused websites and OSS project sites. Display/banner only — no newsletter, podcast, or README."
+    monetization_model:
+      model: "CPM"
+      publisher_revshare: "70%"
+      publisher_cpm: "~$2.25–$2.75 CPM (effective, after 70% share; midpoint ~$2.50) assuming most traffic from EU & North America"
+      advertiser_cpm: "$3.00 (Run of Network) up to $7.50 (custom niche, US/CA/UK/AU/NZ/IE)"
+      min_ad_buy: "$1,000 (discounts: 10% at $3,000, 15% at $25,000, +10% auto-renew)"
+    region: "Global; geographic + topical targeting"
+    payout_support: "Min payout $50; PayPal, OpenCollective, GitHub Sponsors, or bank transfer via Stripe. Paid after accumulating $50."
+    pros:
+      - "Cookie-free / no tracking, GDPR-compliant (no cookie banner), never loads third-party scripts/pixels"
+      - "Contextual + geographic targeting; Acceptable Ads approved; fully open source"
+      - "Low $50 threshold; ~$2.50 CPM; 35M dev impressions/month"
+      - "Cited publishers: ESLint, Flask, daily.dev"
+    cons:
+      - "Developer-only audience; ONE ad per page only; must be above the fold"
+      - "No newsletter/podcast/README placement"
+      - "Requires ~50,000 monthly pageviews to join"
+    notes: "The privacy-first default for OSS docs sites. Revenue = monthly_pageviews / 1000 × ~$2.50. Not a fit for low-traffic repos."
+
+  - name: Carbon Ads
+    category: ads
+    url: https://www.carbonads.net
+    docs: https://www.carbonads.net/join
+    status: alive
+    best_for: "Developer/design-focused websites via native display. Not for newsletters/README/docs/podcasts."
+    monetization_model:
+      model: "CPC (native); sales-assisted, no self-serve"
+      advertiser_min: "$5,000–$10,000 monthly investment over a 60–90 day period"
+      publisher_payout: "no public per-publisher benchmark; $120M+ paid to publishers cumulatively"
+    region: "Curated 350+ hand-picked tech sites across 4 categories (Frontend & Frameworks 148, Dev Tools & Infra 119, Design & Creative 49, AI & Emerging 36)"
+    payout_support: "Threshold, schedule, methods absent from homepage and /join (unverified)"
+    pros:
+      - "Highly curated dev/creator audience (350+ sites) since 2010"
+      - "Native non-intrusive formats (Cover + Classic); pixel-based (not cookie) tracking"
+      - "Brand clients: MongoDB, GitLab, Atlassian, Adobe, AWS"
+    cons:
+      - "High advertiser minimum ($5k–$10k/mo, 60–90 days)"
+      - "No self-serve; direct site targeting 'generally discouraged'"
+      - "No newsletter/email/podcast; publisher payout terms not public"
+    notes: "A BuySellAds sub-network (dashboards on sell.buysellads.com). The developer-focused default alongside EthicalAds; Carbon is curated/sales-led, EthicalAds is self-serve/privacy-first. Official domain is carbonads.NET (not .com)."
+
+  - name: BuySellAds
+    category: ads
+    url: https://www.buysellads.com
+    docs: https://www.buysellads.com/publishers
+    status: alive
+    best_for: "Multi-format monetization across websites, newsletters, podcasts. Broad multi-vertical reach."
+    monetization_model:
+      model: "Managed contextual advertising + self-serve directory; no primary CPM/CPC/flat disclosed"
+      formats: "Email, Native, Sponsored Content, Display, Podcast (short-form audio), Custom Placements (OOH, site sponsorships, browser ads)"
+    region: "Global; verticals: Business, AI, Crypto, Design, Developer"
+    payout_support: "'Reliable payment schedule' + 'complimentary accounting support' mentioned; net terms, threshold, methods not disclosed"
+    pros:
+      - "Many formats in one platform (email/native/sponsored/display/podcast/custom)"
+      - "Dedicated human account team; real-time reporting"
+      - "Top-tier publishers: Axios, Reuters, Morning Brew, Dribbble, MDN, CodePen"
+    cons:
+      - "No pricing transparency (no CPM/CPC/flat or min spend public)"
+      - "Managed-service emphasis; contact required"
+      - "Publisher requirements absent; payout details undisclosed"
+    notes: "The parent umbrella; Carbon Ads (developers) and Coin.Network (crypto) are sub-networks. For a dev-focused list, Carbon Ads is the more targeted entry point; BSA itself is the broader multi-vertical option."
+
+  - name: Passionfroot
+    category: ads
+    url: https://www.passionfroot.me
+    docs: https://www.passionfroot.me/creators
+    status: alive_pivoted
+    best_for: "B2B brands running multi-creator campaigns across newsletters/YouTube/LinkedIn/X/TikTok; newsletter creators (Beehiiv/Substack) seeking brand deals."
+    monetization_model:
+      creator_self_managed: "2% fee (brand covers)"
+      creator_platform_matched: "15% fee (includes payment fees)"
+      brand_pricing: "not public (unverified)"
+      creator_tiers: "Free ($0/mo, no paid creator tiers)"
+    region: "Global; platforms supported: X, Beehiiv, Substack, LinkedIn, YouTube, Instagram, TikTok"
+    payout_support: "Via 'FrootWallet'; no out-of-pocket/upfront costs; min threshold & schedule unverified"
+    pros:
+      - "Free for creators; low 2% on self-managed deals"
+      - "All-in-one (media kit + calendar + booking + payments + messaging)"
+      - "Testimonials from HubSpot, Figma, Intercom, ElevenLabs, Replit, Framer"
+    cons:
+      - "Pivoted to 'Zest' B2B GTM platform; brand-side pricing not public"
+      - "15% on platform-matched deals; no min payout/schedule disclosed"
+      - "B2B/tech lean; no obvious public marketplace (brand discovery is AI-curated)"
+    notes: "Canonical domain is passionfroot.ME (not .com, which has a TLS cert error). Evolved from a creator sponsor-storefront into an AI-powered B2B GTM platform. Useful for OSS authors who also run a newsletter and want inbound brand deals."
+
+  - name: Paved
+    category: ads
+    url: https://www.paved.com
+    docs: https://www.paved.com/publishers
+    status: alive
+    best_for: "Newsletter monetization specifically. No podcast/blog/docs/README."
+    monetization_model:
+      direct_scheduled: "Flat-fee (publisher sets rates for direct partnerships)"
+      dynamic_native: "PPC (paid per-click, 'real human clicks')"
+    region: "Newsletter-only; 3,000+ premium newsletters, 253M subscribers"
+    payout_support: "'Automated payouts'; 'immediate payouts from advertisers when they book placements'; Paved handles invoicing/contracts/payouts with payment protection. Revenue-share %, threshold, methods unverified."
+    pros:
+      - "Newsletter-only scale (3,000+ newsletters, 253M subs)"
+      - "Two models (flat + PPC); handles invoicing/contracts/payouts + payment protection"
+      - "Manual ad review; publisher can refuse advertisers; tracks open/click/conversion"
+    cons:
+      - "Newsletter-only"
+      - "High 1M monthly impressions bar for PPC; 25k-subscriber bar for flat-fee"
+      - "Revenue share not public; payout threshold/methods undisclosed"
+    notes: "Strongest fit if you run a real developer newsletter. The 25k-subscriber / 1M-impression floors are the key gates. Not relevant for repo/README/docs monetization."
+
+# ---------------------------------------------------------------------------
+# Quick status summary (2026-06-29):
+#   alive          : GitHub Sponsors, Open Collective, Open Source Collective,
+#                    Buy Me a Coffee, Patreon, thanks.dev, StackAid,
+#                    EthicalAds, Carbon Ads, BuySellAds, Paved
+#   alive_pivoted  : Polar (→ AI billing MoR), Algora (→ recruiting + bounty sidebar),
+#                    Passionfroot (→ Zest B2B GTM)
+#   alive_unverified: Ko-fi (403 to fetchers)
+#   alive_stale    : IssueHunt OSS subdomain (oss.issuehunt.io; ©2019)
+#   acquired       : Tidelift (→ Sonar, Dec 2024)
+# ---------------------------------------------------------------------------

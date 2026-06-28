@@ -1,0 +1,176 @@
+# data/pricing-benchmarks.yml
+# Rate estimates for OSS sponsorship slots by star tier and slot type.
+#
+# *** ALL FIGURES ARE ESTIMATES / REFERENCE ONLY. ***
+# There is no standardized public market tying $/month to star count. Real prices depend on
+# vertical, traffic, user quality, conversion rate, audience geography, and sponsor budget.
+# Use these as a starting internal anchor, not as a published price list.
+#
+# Anchored to verified real data points (see `anchors` below and docs/case-studies.md).
+
+version: 1
+verified_on: "2026-06-29"
+disclaimer: "ESTIMATE / REFERENCE ONLY. Not a quote, not a guarantee. Re-derive from your own traffic and conversion data."
+
+# ---------------------------------------------------------------------------
+# Verified real-world anchors (these are facts, not estimates).
+# Source: official OpenCollective pages, maintainer blogs, ad-platform pricing pages.
+# ---------------------------------------------------------------------------
+anchors:
+  - source: "Astro — OpenCollective (live 2026-06-29)"
+    url: https://opencollective.com/astrodotbuild
+    facts:
+      total_raised: "$836,294.61"
+      annual_budget_est: "$438,118.47"
+      tiers_monthly: "Backer $10 / Sponsor $100 / Gold $250 / Theme $200 / Platinum $1,000 / Exclusive $10,000"
+
+  - source: "Vue.js — OpenCollective (live 2026-06-29)"
+    url: https://opencollective.com/vuejs
+    facts:
+      total_raised: "$852,880.86"
+      annual_budget_est: "$219,061.00"
+      evan_you_historical: "~$8,000/mo (2016) → ~$9,800/mo (2017)"
+
+  - source: "Vite — OpenCollective (live 2026-06-29)"
+    url: https://opencollective.com/vite
+    facts:
+      total_raised: "$162,400.34"
+      annual_budget_est: "$102,536.16"
+      tiers_monthly: "Backer $5 / Supporter $15 / Bronze $50 / Silver $150 / Gold $500"
+
+  - source: "Homebrew — OpenCollective (live 2026-06-29)"
+    url: https://opencollective.com/homebrew
+    facts:
+      all_time_contributions: "$486,870.56"
+      tiers_monthly: "Backer $5 / Sponsor $100"
+
+  - source: "Tailwind CSS — sponsorship tiers (launched ~Jul 2025)"
+    url: https://tailwindcss.com/sponsor
+    facts:
+      partner: "$5,000/mo"
+      ambassador: "$2,500/mo"
+      supporter: "$500/mo"
+      individual: "$120/yr"
+      derived_estimate: "~$200,000/mo from ~70 companies (third-party derived; not official)"
+
+  - source: "Sentry — OSS funding (annual outflow)"
+    url: https://blog.sentry.io
+    facts:
+      trajectory: "$155k (2021) → $260k (2022) → $500k (2023) → $750k (2024) → $750k (2025)"
+      open_source_pledge: "$2,000/engineer/yr"
+
+  - source: "Caleb Porcio — GitHub Sponsors (personal)"
+    url: https://calebporzio.com/i-just-hit-dollar-100000yr-on-github-sponsors-heres-how-i-did-it
+    facts:
+      annual: "$112,680/yr (~$9,390/mo)"
+
+  - source: "komorebi (~10k stars) — GitHub Sponsors 2024"
+    url: https://lgug2z.com/articles/github-sponsorship-breakdown-for-2024/
+    facts:
+      annual: "$1,861.88 (~$155/mo avg; range $92 → $229/mo)"
+      lesson: "10k stars does NOT auto-convert to meaningful sponsorship without active sales."
+
+  - source: "EthicalAds — publisher pricing (official)"
+    url: https://www.ethicalads.io/publishers/calculator/
+    facts:
+      publisher_revshare: "70%"
+      effective_cpm: "$2.25–$2.75 (midpoint ~$2.50) for EU+NA traffic"
+      min_payout: "$50"
+
+  - source: "Carbon Ads — advertiser entry (official)"
+    url: https://carbonads.net
+    facts:
+      advertiser_min: "$5,000–$10,000/mo over 60–90 days"
+      publisher_per_readme: "no public benchmark (sales-assisted)"
+
+  - source: "JavaScript Weekly (Cooperpress) — Q2 2024 rate card"
+    url: https://cooperpress.com/files/cooperpress-media-kit-q2-2024.pdf
+    facts:
+      subs: "179,802 / 41% open"
+      primary_per_issue: "$3,590"
+      sponsored_links_per_issue: "$1,190"
+      job_listing: "$180"
+
+  - source: "Refactoring — third-party-reported 2023 rates"
+    url: https://refactoring.fm
+    facts:
+      subs: "170,000+"
+      primary: "$2,000"
+      secondary: "$800"
+      sponsored_guest_post: "$5,000"
+
+  - source: "DigitalOcean — OSS credits (not paid sponsorship)"
+    url: https://github.com/Aniket-508/awesome-oss-perks
+    facts:
+      credits_by_stars: "$60/yr (100+) → up to $20,000/yr (10,000+)"
+      note: "Free cloud credits tiered by stars, NOT cash sponsorship. Useful in-kind anchor."
+
+# ---------------------------------------------------------------------------
+# Estimate grid: monthly USD by star tier × slot type.
+# All cells are estimates/reference only. Ranges reflect typical observed deals;
+# outliers (Tailwind-scale) sit far above the 50k row.
+# ---------------------------------------------------------------------------
+estimate_grid_monthly_usd:
+  # star_tier, readme_top_banner, readme_bottom_logo, readme_bottom_text, docs_site_ad, release_note, newsletter_per_issue
+  - star_tier: "100"
+    readme_top_banner: "100–300"
+    readme_bottom_logo: "50–150"
+    readme_bottom_text: "20–75"
+    docs_site_ad: "10–40"
+    release_note: "50–150"
+    newsletter_per_issue: "30–100"
+  - star_tier: "500"
+    readme_top_banner: "200–500"
+    readme_bottom_logo: "100–300"
+    readme_bottom_text: "50–150"
+    docs_site_ad: "25–80"
+    release_note: "100–300"
+    newsletter_per_issue: "100–250"
+  - star_tier: "1000"
+    readme_top_banner: "400–1,000"
+    readme_bottom_logo: "200–600"
+    readme_bottom_text: "100–300"
+    docs_site_ad: "50–200"
+    release_note: "200–600"
+    newsletter_per_issue: "200–500"
+  - star_tier: "5000"
+    readme_top_banner: "1,000–3,000"
+    readme_bottom_logo: "500–1,500"
+    readme_bottom_text: "250–750"
+    docs_site_ad: "150–600"
+    release_note: "500–1,500"
+    newsletter_per_issue: "500–1,500"
+  - star_tier: "10000"
+    readme_top_banner: "2,000–6,000"
+    readme_bottom_logo: "1,000–3,000"
+    readme_bottom_text: "500–1,500"
+    docs_site_ad: "300–1,500"
+    release_note: "1,000–3,000"
+    newsletter_per_issue: "1,000–2,500"
+  - star_tier: "50000"
+    readme_top_banner: "5,000–15,000"
+    readme_bottom_logo: "3,000–10,000"
+    readme_bottom_text: "1,500–5,000"
+    docs_site_ad: "1,000–5,000"
+    release_note: "2,500–8,000"
+    newsletter_per_issue: "2,500–7,000"
+
+# Deal-model price modifiers (apply on top of the slot base).
+deal_model_modifiers:
+  one_time_display_12mo: "~8–10× the monthly rate, discounted 15–20% vs paying monthly"
+  annual_paid_yearly: "~10–12× monthly, discounted 15–20%"
+  affiliate_pure: "$0 fixed; 10–30% recurring or $5–$50 flat per converted user (volume-dependent)"
+  fixed_plus_affiliate: "lower fixed retainer (50–70% of slot base) + commission on conversions"
+  in_kind_credits: "face-value of credits/services; log as sponsorship at fair-market value"
+
+# How to re-derive your own number (always more credible than a star-tier table).
+derivation_method:
+  docs_site_ad: "monthly_pageviews / 1000 × ~$2.50 (EthicalAds publisher CPM)"
+  newsletter: "subs × open_rate × CTR × target_cpc; or anchor to JS Weekly $3,590/180k-subs primary"
+  readme_slot: "star_count is a proxy; real drivers = unique monthly visitors (GitHub Traffic) + npm/PyPI/Docker pulls + audience-to-sponsor fit"
+  rule_of_thumb: "If you can't show traffic or conversion data, price at the LOW end of the range and raise after the first 3 closed deals."
+
+# Region multipliers (estimate).
+region_multipliers:
+  global_usd: 1.0
+  rmb_domestic: "multiply USD × 6–7 for RMB 'face' number, but domestic sponsors often pay in the ¥500–¥5,000/mo band for 1k-star repos (see README.zh-CN.md)"

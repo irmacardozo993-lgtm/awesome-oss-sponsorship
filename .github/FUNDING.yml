@@ -1,0 +1,43 @@
+# .github/FUNDING.yml
+# This is the sponsor button that appears on this repository's page.
+# It is ALSO a live, copy-pasteable example — see templates/funding-yml-example.md
+# for the full annotated version with every supported key.
+#
+# Docs: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/displaying-a-sponsor-button-in-your-repository
+
+# GitHub Sponsors (a single username, OR an array of up to 4 usernames).
+# github: "your-username"
+
+# Open Collective collective slug.
+# open_collective: "your-collective"
+
+# Polar username (note: Polar has pivoted to billing/MoR — see data/platforms.yml).
+# polar: "your-username"
+
+# Buy Me a Coffee username.
+# buy_me_a_coffee: "your-username"
+
+# Ko-fi username.
+# ko_fi: "your-username"
+
+# Patreon username.
+# patreon: "your-username"
+
+# IssueHunt (OSS subdomain: oss.issuehunt.io).
+# issuehunt: "your-username"
+
+# Tidelift: PLATFORM/PACKAGE — platforms: npm, pypi, rubygems, maven, packagist, nuget.
+# tidelift: "npm/your-package"
+
+# thanks.dev: u/gh/USERNAME
+# thanks_dev: "u/gh/your-username"
+
+# Liberapay username.
+# liberapay: "your-username"
+
+# LFX Mentorship (formerly CommunityBridge): PROJECT-NAME.
+# community_bridge: "your-project"
+
+# Custom: a single URL, OR an array of up to 4 URLs.
+# IMPORTANT: any URL containing a colon MUST be wrapped in quotes.
+custom: ["https://your-sponsor-page.example.com/sponsor", "https://your-domain.example.com"]

@@ -1,0 +1,126 @@
+# data/sponsor-types.yml
+# Taxonomy of sponsor slots, sponsor kinds, and deal models.
+# Use with templates/rate-card.md and tools/sponsor-fit-score.md.
+
+version: 1
+
+# Where you can sell exposure (inventory). Each slot has a different value,
+# intrusiveness, and conversion profile. Order ≈ most-valuable → least.
+sponsor_slots:
+  - key: readme_top_banner
+    label: "README top banner"
+    location: "Top of README, above the fold"
+    value: high
+    intrusiveness: medium
+    notes: "Highest-visibility real estate. One or two logos max. Premium price."
+  - key: readme_bottom_logo
+    label: "README bottom logo block"
+    location: "Bottom Sponsors section, logo grid"
+    value: medium_high
+    intrusiveness: low
+    notes: "The dominant pattern (Vue, Vite, Astro). Dynamic SVG grid so you never edit README. Tiered (Gold/Silver/Bronze)."
+  - key: readme_bottom_text
+    label: "README bottom text line"
+    location: "Bottom Sponsors section, text list"
+    value: low
+    intrusiveness: low
+    notes: "Cheapest slot. Name + link. Good for individuals/small backers (BACKERS.md style)."
+  - key: docs_site_ad
+    label: "Documentation site ad"
+    location: "Sidebar/banner on docs site"
+    value: medium
+    intrusiveness: low
+    notes: "Traffic-driven (EthicalAds ~$2.50 CPM). Decouples revenue from star count. Best for high-traffic docs."
+  - key: release_note
+    label: "Release note sponsor"
+    location: "GitHub Release / CHANGELOG entry"
+    value: medium
+    intrusiveness: low
+    notes: "Per-release. Sponsors like version-aligned moments (launches, blog posts)."
+  - key: demo_site
+    label: "Demo / landing site sponsor"
+    location: "Project demo site footer or 'powered by'"
+    value: medium
+    intrusiveness: low
+    notes: "Strong when the demo site gets real traffic (e.g., a playground)."
+  - key: newsletter
+    label: "Newsletter sponsorship"
+    location: "Dedicated email / classified / primary spot"
+    value: high
+    intrusiveness: medium
+    notes: "Highest $ per impression if you have a list. Anchored to JS Weekly $3,590/issue (180k subs)."
+  - key: community_channel
+    label: "Discord / Slack / WeChat group sponsor"
+    location: "Pinned message, channel name, role"
+    value: low_medium
+    intrusiveness: low
+    notes: "Engaged but small audiences. Often bundled, rarely standalone."
+  - key: issue_template
+    label: "Issue/PR template sponsor"
+    location: "Footer of issue/PR templates"
+    value: low
+    intrusiveness: low
+    notes: "Subtle. Avoid making support issues feel like ad pages."
+  - key: cli_startup
+    label: "CLI startup / --help output"
+    location: "One line on CLI launch or update check"
+    value: low_medium
+    intrusiveness: medium
+    notes: "MUST be opt-in or silent by default. Never block or slow startup. Cache-bust carefully."
+  - key: sponsor_page
+    label: "Standalone sponsors web page"
+    location: "project.tld/sponsors"
+    value: medium
+    intrusiveness: none
+    notes: "Where tier ladders actually live (Vue pattern). README just links here."
+
+# Who sponsors you.
+sponsor_kinds:
+  - key: individual
+    label: "Individual backer"
+    intent: "Goodwill, tip, name in BACKERS"
+    typical_deal: "$2–$50/mo"
+  - key: company_direct
+    label: "Company using your project"
+    intent: "Brand awareness to devs, goodwill, recruiting pipeline"
+    typical_deal: "$100–$5,000+/mo"
+  - key: devrel
+    label: "DevRel / developer marketing team"
+    intent: "Reach devs at the consideration moment"
+    typical_deal: "$250–$10,000/mo or campaign"
+  - key: infrastructure
+    label: "Infrastructure / in-kind sponsor"
+    intent: "Provide credits/services (CI, hosting, DNS, secrets) in exchange for logo"
+    typical_deal: "Credits equal to $ value (e.g., MacStadium, 1Password for Homebrew)"
+  - key: ecosystem
+    label: "Ecosystem/adjacent vendor"
+    intent: "Their product deploys with/integrates your project"
+    typical_deal: "$500–$5,000/mo + affiliate"
+  - key: founder_growth
+    label: "Founder / growth lead"
+    intent: "Performance: signups, installs, pipeline"
+    typical_deal: "Affiliate or fixed+affiliate hybrid"
+
+# How the deal is structured.
+deal_models:
+  - key: one_time
+    label: "One-time sponsorship"
+    notes: "Single payment for a defined period (e.g., 1 release, 1 month). Low commitment."
+  - key: monthly_recurring
+    label: "Monthly recurring"
+    notes: "Predictable MRR. Default for GitHub Sponsors / Open Collective tiers."
+  - key: annual
+    label: "Annual (paid yearly)"
+    notes: "~8–10× monthly, often discounted 15–20%. Sponsors prefer annual for budgeting."
+  - key: affiliate_pure
+    label: "Affiliate / referral (pure)"
+    notes: "$0 fixed; earn commission (10–30% recurring or flat) on converted users. Performance-only."
+  - key: bounty
+    label: "Bounty (per issue/PR)"
+    notes: "Funder pays a fixed bounty for a specific issue; maintainer or contributor claims on merge."
+  - key: fixed_plus_affiliate
+    label: "Fixed fee + affiliate (hybrid)"
+    notes: "Guaranteed monthly retainer + commission on conversions. Best balance of predictability + upside."
+  - key: in_kind
+    label: "In-kind / barter"
+    notes: "Services/credits instead of cash (hosting, CI, monitoring). Real value; log it."

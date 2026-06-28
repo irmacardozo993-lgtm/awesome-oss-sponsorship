@@ -1,0 +1,15 @@
+# .github/ISSUE_TEMPLATE/config.yml
+# Issue template configuration.
+# Docs: https://docs.github.com/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository
+
+blank_issues_enabled: true
+contact_links:
+  - name: 📖 Read the docs first
+    url: https://github.com/your-username/awesome-oss-sponsorship/blob/main/docs/getting-started.md
+    about: Start here — platform comparison, pricing, and outreach playbooks.
+  - name: 💬 Sponsorship question / discussion
+    url: https://github.com/your-username/awesome-oss-sponsorship/discussions
+    about: Ask the community how to price or approach a sponsor (use Discussions, not Issues).
+  - name: 🐛 Report a wrong/outdated platform fact
+    url: https://github.com/your-username/awesome-oss-sponsorship/issues/new?template=platform-correction.md
+    about: Found a dead link, wrong fee, or pivoted platform? Tell us with a source.
