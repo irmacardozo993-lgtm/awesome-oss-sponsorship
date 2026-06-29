@@ -286,7 +286,7 @@ Korrekturen und neue Plattformen/Programme sind willkommen — **mit einer zitie
 ## Danksagung
 
 - **[Linux.do](https://linux.do)** — chinesischsprachige Entwickler- und Tech-Community (Discourse), deren Mitglieder und Feedback die China-Verbreitungsanleitung in diesem Repo geprägt haben.
-- **Telegram OpenClaw 中文社区** — die chinesischsprachige OpenClaw-Community auf Telegram, für Support und Diskussion.
+- **[Telegram OpenClaw 中文社区](https://t.me/OpenClaw_Group)** — die chinesischsprachige OpenClaw-Community auf Telegram, für Support und Diskussion.
 
 ---
 

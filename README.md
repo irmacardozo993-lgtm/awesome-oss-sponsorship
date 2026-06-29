@@ -274,7 +274,7 @@ Corrections and new platforms/programs are welcome — **with a cited official s
 ## Acknowledgments
 
 - **[Linux.do](https://linux.do)** — Chinese-language developer & tech community (Discourse) whose members and feedback shaped the China-distribution guidance in this guide.
-- **Telegram OpenClaw 中文社区** — the Chinese-language OpenClaw community on Telegram, for support and discussion.
+- **[Telegram OpenClaw 中文社区](https://t.me/OpenClaw_Group)** — the Chinese-language OpenClaw community on Telegram, for support and discussion.
 
 ---
 
