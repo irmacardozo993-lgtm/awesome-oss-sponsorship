@@ -265,12 +265,9 @@ Corrections and new platforms/programs are welcome — **with a cited official s
 
 ## Star History
 
-<!-- Uncomment and replace OWNER/REPO after you push this to GitHub. -->
-<!--
-<a href="https://star-history.com/#OWNER/REPO&Date">
-  <img src="https://api.star-history.com/svg?repos=OWNER/REPO&type=Date" alt="Star History">
+<a href="https://star-history.com/#irmacardozo993-lgtm/awesome-oss-sponsorship&Date">
+  <img src="https://api.star-history.com/svg?repos=irmacardozo993-lgtm/awesome-oss-sponsorship&type=Date" alt="Star History">
 </a>
--->
 
 ---
 
