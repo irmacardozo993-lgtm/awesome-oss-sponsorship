@@ -284,6 +284,13 @@ Les corrections et les nouvelles plateformes/programmes sont les bienvenues — 
 
 ---
 
+## Remerciements
+
+- **[Linux.do](https://linux.do)** — communauté de développeurs et de technologie en chinois (Discourse) dont les membres et retours ont façonné le guide de distribution en Chine de ce dépôt.
+- **Telegram OpenClaw 中文社区** — la communauté OpenClaw en chinois sur Telegram, pour son soutien et ses discussions.
+
+---
+
 ## Avertissement
 
 Tous les prix, frais, taux de commission et chiffres de revenus de ce dépôt sont des

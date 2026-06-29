@@ -180,6 +180,26 @@ These three reward technical depth (技术深度), not clickbait (非标题党).
 
 ---
 
+## 8.5 Linux.do (Chinese dev community — Discourse)
+
+[Linux.do](https://linux.do) is a Chinese-language developer/tech community built on
+Discourse, with a trust-level system (TL0–TL3; TL3 = "活跃用户 / Regular"). The audience
+skews toward developers, self-hosters, AI/LLM users, and OSS maintainers — a high-signal
+fit for devtool, CLI, SDK, and AI projects.
+
+- **Where to post:** pick the category that matches the content — 资源/分享, 开发调优,
+  非技术, or the AI/LLM boards. A real write-up (a launch story, a how-we-built-it, a
+  problem your tool solves) outperforms a bare link.
+- **Leverage your trust level:** as a TL3 member you can post in more categories, your
+  topics carry credibility, and the community engages more readily. Lead with substance,
+  not promotion — the trust-level system exists to reward exactly that.
+- **Anti-spam:** one high-quality topic, not multi-posting. Low-effort / 软文 posts get
+  flagged and can cost trust level. Reply honestly in comments; don't bump your own thread.
+- **Pair with V2EX:** Linux.do and V2EX are the two Chinese dev forums — write a
+  separately-tailored piece for each (different audiences/formats), spaced days apart.
+
+---
+
 ## 9. Twitter / X thread structure
 
 A thread is the highest-effort, highest-leverage English social format for dev tools. Structure it as a story, not a brochure.
