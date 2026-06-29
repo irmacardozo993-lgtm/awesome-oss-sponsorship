@@ -13,6 +13,8 @@ Curated platforms · verified pricing anchors · copy-paste templates · real ca
 
 </div>
 
+🌐 **Languages:** [English](README.md) · [中文](README.zh-CN.md) · [Español](README.es.md) · [日本語](README.ja.md) · [Français](README.fr.md) · [Deutsch](README.de.md)
+
 > **Sponsorship is a sales channel, not a star-count reward.** Stars are a popularity
 > proxy — the real pricing drivers are **unique monthly visitors** (GitHub Traffic),
 > **package downloads** (npm / PyPI / Docker Hub), and **audience-to-sponsor fit**. This
@@ -234,7 +236,7 @@ Copy-paste, fill in the `[brackets]`, ship.
 
 Data (source of truth): [`data/platforms.yml`](data/platforms.yml) · [`data/pricing-benchmarks.yml`](data/pricing-benchmarks.yml) · [`data/sponsor-types.yml`](data/sponsor-types.yml) · [`data/affiliate-programs.yml`](data/affiliate-programs.yml).
 
-中文版: [README.zh-CN.md](README.zh-CN.md).
+🌐 **Languages:** [English](README.md) · [中文](README.zh-CN.md) · [Español](README.es.md) · [日本語](README.ja.md) · [Français](README.fr.md) · [Deutsch](README.de.md)
 
 ---
 
