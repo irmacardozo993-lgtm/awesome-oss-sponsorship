@@ -29,6 +29,13 @@ nie ein Versprechen. Siehe [den Haftungsausschluss](#haftungsausschluss).
 
 ---
 
+## Danksagung
+
+- **[Telegram OpenClaw 中文社区](https://t.me/OpenClaw_Group)** — die chinesischsprachige OpenClaw-Community auf Telegram, für Support und Diskussion.
+- **[Linux.do](https://linux.do)** — chinesischsprachige Entwickler- und Tech-Community (Discourse), deren Mitglieder und Feedback die China-Verbreitungsanleitung in diesem Repo geprägt haben.
+
+---
+
 ## Inhaltsverzeichnis
 
 - [Für wen das ist](#für-wen-das-ist)
@@ -280,13 +287,6 @@ Korrekturen und neue Plattformen/Programme sind willkommen — **mit einer zitie
 <a href="https://star-history.com/#irmacardozo993-lgtm/awesome-oss-sponsorship&Date">
   <img src="https://api.star-history.com/svg?repos=irmacardozo993-lgtm/awesome-oss-sponsorship&type=Date" alt="Star History">
 </a>
-
----
-
-## Danksagung
-
-- **[Telegram OpenClaw 中文社区](https://t.me/OpenClaw_Group)** — die chinesischsprachige OpenClaw-Community auf Telegram, für Support und Diskussion.
-- **[Linux.do](https://linux.do)** — chinesischsprachige Entwickler- und Tech-Community (Discourse), deren Mitglieder und Feedback die China-Verbreitungsanleitung in diesem Repo geprägt haben.
 
 ---
 

@@ -29,6 +29,13 @@ jamais un devis, jamais une promesse. Voir [l'avertissement](#avertissement).
 
 ---
 
+## Remerciements
+
+- **[Telegram OpenClaw 中文社区](https://t.me/OpenClaw_Group)** — la communauté OpenClaw en chinois sur Telegram, pour son soutien et ses discussions.
+- **[Linux.do](https://linux.do)** — communauté de développeurs et de technologie en chinois (Discourse) dont les membres et retours ont façonné le guide de distribution en Chine de ce dépôt.
+
+---
+
 ## Table des matières
 
 - [À qui s'adresse ce guide](#à-qui-sadresse-ce-guide)
@@ -281,13 +288,6 @@ Les corrections et les nouvelles plateformes/programmes sont les bienvenues — 
 <a href="https://star-history.com/#irmacardozo993-lgtm/awesome-oss-sponsorship&Date">
   <img src="https://api.star-history.com/svg?repos=irmacardozo993-lgtm/awesome-oss-sponsorship&type=Date" alt="Star History">
 </a>
-
----
-
-## Remerciements
-
-- **[Telegram OpenClaw 中文社区](https://t.me/OpenClaw_Group)** — la communauté OpenClaw en chinois sur Telegram, pour son soutien et ses discussions.
-- **[Linux.do](https://linux.do)** — communauté de développeurs et de technologie en chinois (Discourse) dont les membres et retours ont façonné le guide de distribution en Chine de ce dépôt.
 
 ---
 

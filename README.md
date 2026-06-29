@@ -28,6 +28,13 @@ docs, OpenCollective pages, maintainer blogs, ad-network pricing pages). All pri
 
 ---
 
+## Acknowledgments
+
+- **[Telegram OpenClaw 中文社区](https://t.me/OpenClaw_Group)** — the Chinese-language OpenClaw community on Telegram, for support and discussion.
+- **[Linux.do](https://linux.do)** — Chinese-language developer & tech community (Discourse) whose members and feedback shaped the China-distribution guidance in this guide.
+
+---
+
 ## Table of contents
 
 - [Who this is for](#who-this-is-for)
@@ -268,13 +275,6 @@ Corrections and new platforms/programs are welcome — **with a cited official s
 <a href="https://star-history.com/#irmacardozo993-lgtm/awesome-oss-sponsorship&Date">
   <img src="https://api.star-history.com/svg?repos=irmacardozo993-lgtm/awesome-oss-sponsorship&type=Date" alt="Star History">
 </a>
-
----
-
-## Acknowledgments
-
-- **[Telegram OpenClaw 中文社区](https://t.me/OpenClaw_Group)** — the Chinese-language OpenClaw community on Telegram, for support and discussion.
-- **[Linux.do](https://linux.do)** — Chinese-language developer & tech community (Discourse) whose members and feedback shaped the China-distribution guidance in this guide.
 
 ---
 
